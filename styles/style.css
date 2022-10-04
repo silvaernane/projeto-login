@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-/* 
-    Paleta de cores
-    verde: #49a09d
-    lilás: #5f2c82
-*/
-
 * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0px;
@@ -13,8 +7,8 @@
     box-sizing: border-box;
 }
 
-body, html {
-    background-color: #F9794B;
+body, html { 
+    background-image: linear-gradient(to top, #F9794B, #F9BC4B);
     height: 100vh;
     width: 100vw;
 }
@@ -30,15 +24,15 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
-
+    
     background-color: #fff;
     width: 70vw;
-    height: 500px;
+    height: 460px;
     border-radius: 15px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
-
+    
+    transform: translate(-50%, -50%);
     transition: width .2s, height .2s;
     transition-timing-function: ease;
 }
@@ -65,14 +59,39 @@ div#formulario > p {
 }
 
 form > div.campo {
-    background-color: #F9BC4B;
-    height: 40px;
+    background-color: #ff8b61;
+    border: 2px solid #ff8b61;
+    height: 41px;
     border-radius: 5px;
     margin: 5px 0px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
 }
 
 form label {
     display: none;
+}
+
+div.campo > span {
+    color: #fff;
+    /* background-color: #000; */
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: #FFF;
+    font-size: 1em;
+    width: calc(100% - 45px);
+    height: 100%;
+    border: 0px;
+    border-radius: 5px;
+    padding: 4px;
+    transform: translateY(-12px);
+}
+
+div.campo > input:focus-within {
+    color: #b45634;
 }
 
 form > input[type=submit] {
@@ -86,6 +105,7 @@ form > input[type=submit] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
 }
 
 form > input[type=submit]:hover {
